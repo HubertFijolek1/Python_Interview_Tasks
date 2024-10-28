@@ -1,4 +1,4 @@
-### 9. **Function that takes a sentence and removes all punctuation**
+### 19. **Function that takes a sentence and removes all punctuation**
 
 import string
 def remove_punctuation(s):

@@ -1,4 +1,4 @@
-### 7. **Function that reverses a string without using built-in reverse functions**
+### 17. **Function that reverses a string without using built-in reverse functions**
 
 def reverse_string(s):
     return s[::-1]
