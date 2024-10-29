@@ -7,14 +7,12 @@ def count_file_content(filename):
         characters = sum(len(line) for line in lines)
     return len(lines), words, characters
 
-
 def count_file_content2(filename):
     with open(filename, 'r') as file:
         content = file.read()
         lines = content.splitlines()
         words = content.split()
         return len(lines), len(words), len(content)
-
 
 from collections import Counter
 def count_file_content3(filename):
