@@ -1,4 +1,4 @@
-### 7. **Function that checks whether a string has balanced brackets**
+### 17. **Function that checks whether a string has balanced brackets**
 
 def is_balanced(s):
     stack = []

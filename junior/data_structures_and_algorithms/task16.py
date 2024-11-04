@@ -1,4 +1,4 @@
-### 6. **Function that rotates a matrix (2D list) by 90 degrees**
+### 16. **Function that rotates a matrix (2D list) by 90 degrees**
 
 def rotate_matrix(matrix):
     return [list(reversed(col)) for col in zip(*matrix)]

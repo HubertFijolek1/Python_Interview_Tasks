@@ -1,4 +1,4 @@
-### 10. **Function that returns the maximum depth (or height) of a binary tree**
+### 20. **Function that returns the maximum depth (or height) of a binary tree**
 
 def max_depth(tree):
     if not tree:

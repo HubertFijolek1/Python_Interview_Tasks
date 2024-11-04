@@ -1,4 +1,4 @@
-### 8. **Function that merges two dictionaries, combining values for matching keys**
+### 18. **Function that merges two dictionaries, combining values for matching keys**
 
 from collections import defaultdict
 def merge_dicts(dict1, dict2):
