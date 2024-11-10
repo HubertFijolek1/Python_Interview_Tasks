@@ -35,3 +35,20 @@ class Cat2(Animal2):
         return f"{self.name} says Meow!"
 
 
+#Solution 3 (Using abstract base)
+
+from abc import ABC, abstractmethod
+
+class Animal3(ABC):
+    @abstractmethod
+    def speak(self):
+        pass
+
+class Dog3(Animal3):
+    def speak(self):
+        return "Woof!"
+
+class Cat3(Animal3):
+    def speak(self):
+        return "Meow!"
+
