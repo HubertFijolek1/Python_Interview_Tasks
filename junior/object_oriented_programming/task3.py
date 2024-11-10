@@ -17,4 +17,21 @@ class Cat(Animal):
         return "Meow!"
 
 
+# Solution 2 (Using __init__ for shared attributes):
+
+class Animal2:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        pass
+
+class Dog2(Animal2):
+    def speak(self):
+        return f"{self.name} says Woof!"
+
+class Cat2(Animal2):
+    def speak(self):
+        return f"{self.name} says Meow!"
+
 
