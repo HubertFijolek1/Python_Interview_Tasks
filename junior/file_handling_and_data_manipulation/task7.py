@@ -10,3 +10,12 @@ def write_dict_to_csv(data, filename):
         writer = csv.DictWriter(file, fieldnames=keys)
         writer.writeheader()
         writer.writerows(data)
+
+
+#Solution 2 (Using `pandas`):
+
+import pandas as pd
+
+def write_dict_to_csv2(data, filename):
+    df = pd.DataFrame(data)
+    df.to_csv(filename, index=False)
