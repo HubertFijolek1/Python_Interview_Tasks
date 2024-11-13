@@ -7,3 +7,12 @@ def extract_lines_with_keyword(filename, keyword):
         for line in file:
             if keyword in line:
                 print(line.strip())
+
+
+#Solution 2(Using list comprehension):
+
+def extract_lines_with_keyword2(filename, keyword):
+    with open(filename, 'r') as file:
+        lines = [line.strip() for line in file if keyword in line]
+    return lines
+
