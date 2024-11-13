@@ -18,3 +18,13 @@ def list_files_and_subdirectories2(directory):
         for file in files:
             print(f"File: {os.path.join(root, file)}")
 
+
+#Solution 3(Using `Path` from `pathlib`):
+
+from pathlib import Path
+
+def list_files_and_subdirectories3(directory):
+    path = Path(directory)
+    for item in path.iterdir():
+        print(item)
+
