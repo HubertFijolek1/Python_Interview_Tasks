@@ -16,3 +16,14 @@ def extract_lines_with_keyword2(filename, keyword):
         lines = [line.strip() for line in file if keyword in line]
     return lines
 
+
+# Solution 3(Using `re` for keyword search):
+
+import re
+
+def extract_lines_with_keyword3(filename, keyword):
+    with open(filename, 'r') as file:
+        for line in file:
+            if re.search(keyword, line):
+                print(line.strip())
+
