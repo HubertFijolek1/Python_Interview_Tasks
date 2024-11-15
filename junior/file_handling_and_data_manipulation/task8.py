@@ -10,10 +10,18 @@ def pretty_print_json(filename):
 
 # Solution 2 (Using pprint for formatted printing):
 
-import json
 from pprint import pprint
 
 def pretty_print_json2(filename):
     with open(filename, 'r') as file:
         data = json.load(file)
     pprint(data)
+
+
+#Solution 3 (Manual formatting using loops):
+
+def pretty_print_json3(filename):
+    with open(filename, 'r') as file:
+        data = json.load(file)
+    for key, value in data.items():
+        print(f"{key}: {json.dumps(value, indent=4)}")
