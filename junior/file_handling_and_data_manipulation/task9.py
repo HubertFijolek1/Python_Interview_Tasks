@@ -17,3 +17,14 @@ def find_and_replace2(filename, old_word, new_word):
     with open(filename, 'w') as file:
         for line in lines:
             file.write(line.replace(old_word, new_word))
+
+# Solution 3 (Using re.sub for regex-based replacement):
+
+import re
+
+def find_and_replace3(filename, old_word, new_word):
+    with open(filename, 'r') as file:
+        content = file.read()
+    content = re.sub(rf'\\b{old_word}\\b', new_word, content)
+    with open(filename, 'w') as file:
+        file.write(content)
