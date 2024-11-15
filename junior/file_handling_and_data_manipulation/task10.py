@@ -17,3 +17,12 @@ def concatenate_files2(output_file, *input_files):
         for line in fileinput.input(files=input_files):
             outfile.write(line)
 
+# Solution 3 (Using Path from pathlib)
+
+from pathlib import Path
+
+def concatenate_files3(output_file, *input_files):
+    with open(output_file, 'w') as outfile:
+        for fname in input_files:
+            content = Path(fname).read_text()
+            outfile.write(content)
