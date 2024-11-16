@@ -34,6 +34,15 @@ def time_logger2(func):
         return result
     return wrapper
 
+# Solution 3 (Logging to a file):
 
-
+def time_logger(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        with open("log.txt", "a") as f:
+            f.write(f"Function {func.__name__} took {end_time - start_time:.4f} seconds\\n")
+        return result
+    return wrapper
 
