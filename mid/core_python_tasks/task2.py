@@ -17,3 +17,15 @@ class FileManager:
 # Example:
 with FileManager("test.txt", "w") as file:
     file.write("Hello, world!")
+
+# Solution 2 (Using contextlib.contextmanager):
+
+from contextlib import contextmanager
+
+@contextmanager
+def file_manager(filename, mode):
+    file = open(filename, mode)
+    try:
+        yield file
+    finally:
+        file.close()
