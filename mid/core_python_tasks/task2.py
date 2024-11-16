@@ -29,3 +29,21 @@ def file_manager(filename, mode):
         yield file
     finally:
         file.close()
+
+# Solution 3 (With error handling in __exit__):
+
+class FileManager:
+    def __init__(self, filename, mode):
+        self.filename = filename
+        self.mode = mode
+
+    def __enter__(self):
+        self.file = open(self.filename, self.mode)
+        return self.file
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        if exc_type is not None:
+            print(f"Error occurred: {exc_value}")
+        self.file.close()
+
+
