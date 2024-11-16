@@ -8,3 +8,13 @@ def char_count(s):
 
 # Example:
 print(char_count("hello"))
+
+# Solution 2 (Using a dictionary with a loop):
+
+def char_count2(s):
+    counts = {}
+    for char in s:
+        counts[char] = counts.get(char, 0) + 1
+    return counts
+
+print(char_count2("hello"))
