@@ -19,3 +19,21 @@ def slow_function():
     time.sleep(2)
 
 slow_function()
+
+# Solution 2 (Using functools.wraps to preserve metadata):
+
+from functools import wraps
+
+def time_logger2(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(f"Execution time: {end_time - start_time:.4f} seconds")
+        return result
+    return wrapper
+
+
+
+
