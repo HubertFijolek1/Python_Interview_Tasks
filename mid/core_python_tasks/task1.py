@@ -18,3 +18,15 @@ def char_count2(s):
     return counts
 
 print(char_count2("hello"))
+
+# Solution 3 (Using defaultdict):
+
+from collections import defaultdict
+
+def char_count3(s):
+    counts = defaultdict(int)
+    for char in s:
+        counts[char] += 1
+    return dict(counts)
+
+print(char_count3("hello"))
