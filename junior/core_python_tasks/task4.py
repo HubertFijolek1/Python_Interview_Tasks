@@ -1,9 +1,5 @@
 ### 4. **Function to remove duplicates from a list while preserving order**
 
-def remove_duplicates(lst):
-    seen = set()
-    return [x for x in lst if not (x in seen or seen.add(x))]
-
 def remove_duplicates2(lst):
     unique_lst = []
     for item in lst:
