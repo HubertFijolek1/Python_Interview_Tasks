@@ -12,3 +12,16 @@ def flatten(lst):
 
 # Example:
 print(flatten([[1, 2, [3]], 4]))
+
+# Solution 2 (Using a stack):
+
+def flatten2(lst):
+    flat_list = []
+    stack = list(lst)
+    while stack:
+        item = stack.pop(0)
+        if isinstance(item, list):
+            stack = item + stack
+        else:
+            flat_list.append(item)
+    return flat_list
