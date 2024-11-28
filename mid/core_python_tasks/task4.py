@@ -1,5 +1,6 @@
 # 4. Function to flatten a nested list
 
+
 # Solution 1 (Using recursion):
 def flatten(lst):
     flat_list = []

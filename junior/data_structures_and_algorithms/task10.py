@@ -10,7 +10,7 @@ def sum_nested_list(nested_list):
     return total
 
 def sum_nested_list2(nested_list):
-    return sum(sum_nested_list(item) if isinstance(item, list) else item for item in nested_list)
+    return sum(sum_nested_list2(item) if isinstance(item, list) else item for item in nested_list)
 
 def sum_nested_list3(nested_list):
     stack = list(nested_list)
