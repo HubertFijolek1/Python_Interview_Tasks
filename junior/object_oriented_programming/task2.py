@@ -1,5 +1,4 @@
 # 2. Class BankAccount with methods to deposit, withdraw, and check the balance
-
 class BankAccount:
     def __init__(self, balance=0):
         self.balance = balance
