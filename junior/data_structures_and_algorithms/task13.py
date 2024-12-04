@@ -18,4 +18,3 @@ def has_unique_chars3(s):
             return False
         seen.append(char)
     return True
-
