@@ -11,6 +11,7 @@ def has_unique_chars2(s):
         char_dict[char] = True
     return True
 
+
 def has_unique_chars3(s):
     seen = []
     for char in s:
